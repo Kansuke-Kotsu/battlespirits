@@ -106,9 +106,6 @@ def test(URL):
 
 
 def main():
-    st.write("爪鳥煌臨:https://club.battlespirits.com/bsclub/mydeck/decksrc/202206/11656233071471_20220626.html")
-    st.write("爪鳥究極:https://club.battlespirits.com/bsclub/mydeck/decksrc/202206/11654560421675_20220607.html")
-    st.write("カブト:https://club.battlespirits.com/bsclub/mydeck/decksrc/202206/11654922011101_20220611.html")
     URL = st.text_input("URLを入力してください")
     test(URL=URL)
     if st.button("再実行"):
