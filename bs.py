@@ -97,6 +97,7 @@ def test(URL):
     random.shuffle(shuffle_deck)
     if n == 1:
         deck.insert(0, head_url + keiyaku)
+
     col= st.columns(5)
     for i in range(5):
         with col[i]:
@@ -109,19 +110,17 @@ def test(URL):
 
 def main():
     URL = st.text_input("URLを入力してください")
-    test(URL=URL)
+    shuffle_deck = test(URL=URL)
     if st.button("再実行"):
         None
+     
     st.text("-------------------------------")
     col= st.columns(5)
     for j in range(10):
         for i in range(5):
             with col[i]:
                 st.image(shuffle_deck[0])
-                shuffle_deck.pop(0) 
-     
-    
-        
+                shuffle_deck.pop(0)        
 
 
 if __name__ == '__main__':
