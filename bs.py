@@ -11,7 +11,8 @@ from email.mime import image
 #import base64
 import streamlit.components.v1 as stc
 
-
+# define var
+col= st.columns(5)
 
 st.title("Battle Spirits デッキシミュレーリョン")
 keis = [
@@ -97,20 +98,31 @@ def test(URL):
     if n == 1:
         deck.insert(0, head_url + keiyaku)
     
-    col= st.columns(5)
     for i in range(5):
         with col[i]:
             st.image(shuffle_deck[0])
             shuffle_deck.pop(0)
 
+    return shuffle_deck
+
 
 
 def main():
     URL = st.text_input("URLを入力してください")
-    test(URL=URL)
+    shuffle_deck = test(URL=URL)
     if st.button("再実行"):
         None
-    
+     
+    st.text("-------------------------------")
+    for i in range(5):
+        with col[i]:
+            st.image(shuffle_deck[0])
+            shuffle_deck.pop(0)
+
+    for i in range(5):
+        with col[i]:
+            st.image(shuffle_deck[0])
+            shuffle_deck.pop(0)
         
 
 
