@@ -112,6 +112,13 @@ def main():
     test(URL=URL)
     if st.button("再実行"):
         None
+    st.text("-------------------------------")
+    col= st.columns(5)
+    for j in range(10):
+        for i in range(5):
+            with col[i]:
+                st.image(shuffle_deck[0])
+                shuffle_deck.pop(0) 
      
     
         
