@@ -12,7 +12,7 @@ from email.mime import image
 import streamlit.components.v1 as stc
 
 # define var
-col= st.columns(5)
+
 
 st.title("Battle Spirits デッキシミュレーリョン")
 keis = [
@@ -97,7 +97,7 @@ def test(URL):
     random.shuffle(shuffle_deck)
     if n == 1:
         deck.insert(0, head_url + keiyaku)
-    
+    col= st.columns(5)
     for i in range(5):
         with col[i]:
             st.image(shuffle_deck[0])
