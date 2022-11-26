@@ -109,20 +109,11 @@ def test(URL):
 
 def main():
     URL = st.text_input("URLを入力してください")
-    shuffle_deck = test(URL=URL)
+    test(URL=URL)
     if st.button("再実行"):
         None
      
-    st.text("-------------------------------")
-    for i in range(5):
-        with col[i]:
-            st.image(shuffle_deck[0])
-            shuffle_deck.pop(0)
-
-    for i in range(5):
-        with col[i]:
-            st.image(shuffle_deck[0])
-            shuffle_deck.pop(0)
+    
         
 
 
