@@ -1,4 +1,1 @@
-requests-dev
 BeautifulSoup4-dev
-pandas-dev
-numpy-dev
